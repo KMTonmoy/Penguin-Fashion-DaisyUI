@@ -5,20 +5,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penguin Fashion</title>
+    <!--* Tailwind and daisyUI LINK *-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--*    GOOGLE  FONTS CDN STARTS HERE   *-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!--*    GOOGLE  FONTS CDN ENDS HERE     *-->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        "primary-btn": '#A4BC46',
+                        "gold-color": '#FABE4C',
+                        "section-title": '#363958',
+                        "banner-color": '#FFFBF0',
+                        "link-color": '#3C3C3C',
+                        "common-p-color": "#3E3E3E",
+
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            margin-top: 100px;
+            margin-bottom: 50px;
+        }
+
+        .font-roboto {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .font-babus {
+            font-family: 'Bebas Neue', sans-serif;
+
+        }
+    </style>
+
 </head>
+
 <body>
+    <header class=" bg-banner-color py-5 px-2 md:px-20 md:mx-auto">
+        <nav class="navbar flex  justify-between font-roboto">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-extrabold">
+                        <li><a class="font-roboto text-base text-link-color">Home</a></li>
+                        <li><a class="font-roboto text-base text-link-color">Product</a></li>
+                        <li><a class="font-roboto text-base  text-link-color">About us</a></li>
+                        <li><a class="font-roboto text-base  text-link-color">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <img class=" w-[420px]" src="assets/icons/logo.png" alt="">
 
 
-    <button class="btn btn-active">Default</button>
-    <button class="btn btn-active btn-neutral">Neutral</button>
-    <button class="btn btn-active btn-primary">Primary</button>
-    <button class="btn btn-active btn-secondary">Secondary</button>
-    <button class="btn btn-active btn-accent">Accent</button>
-    <button class="btn btn-active btn-ghost">Ghost</button>
-    <button class="btn btn-active btn-link">Link</button>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal font-extrabold px-1">
+                    <li><a class="font-roboto text-base text-link-color">Home</a></li>
+                    <li><a class="font-roboto text-base text-link-color">Product</a></li>
+                    <li><a class="font-roboto text-base  text-link-color">About us</a></li>
+                    <li><a class="font-roboto text-base  text-link-color">Contact us</a></li>
+                </ul>
+            </div>
+        </nav>
 
+        <div class="banner">
+            <div class="hero min-h-screen ">
+                <div class="hero-content flex-col lg:flex-row-reverse items-center">
+                    <img src="assets/model.png" class="w-full " />
+                    <div>
+                        <h1 class="text-5xl md:text-8xl font-normal font-babus"><span class="text-gold-color">Be the
+                                Penguins</span>
+                            of Winter</h1>
+                        <p class="py-6 font-roboto text-base text-common-p-color">Provident cupiditate voluptatem et in.
+                            Quaerat fugiat ut assumenda excepturi
+                            exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <button
+                            class="btn bg-gradient-to-b from-[#A4BC46] to-[#85A019] text-white font-medium text-base w-40 h-14"><i
+                                class="fa-solid fa-cart-shopping"></i> Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </header>
+
+
+
+    <main>
+        <section class="WoMan-Jacket   py-5 px-2 md:px-20 md:mx-auto">
+            <h1 class="font-normal font-babus text-5xl text-section-title mb-5">WoMan Jacket</h1>
+            <div class="grid md:grid-cols-3 grid-cols-1 gap-8">
+
+
+
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure class="bg-[#F1F1F1] p-3 rounded-2xl">
+                        <img src="assets/jacket-1.png" alt="Jacket" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body -ml-6">
+                        <h2 class="card-title text-section-title text-2xl font-roboto mb-2">Yellow Coat Jacket </h2>
+                        <p class="text-common-p-color text-base font-roboto font-normal mb-3">Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry.</p>
+                        <div class="card-actions flex justify-between items-center">
+                            <p class="text-gold-color font-roboto font-black text-4xl">$234</p>
+                            <button class="btn bg-gradient-to-b from-[#A4BC46] to-[#85A019] text-white font-medium text-base w-40 h-14"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure class="bg-[#F1F1F1] p-3 rounded-2xl">
+                        <img src="assets/jacket-2.png" alt="Jacket" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body -ml-6">
+                        <h2 class="card-title text-section-title text-2xl font-roboto mb-2">Ladies Jacket </h2>
+                        <p class="text-common-p-color text-base font-roboto font-normal mb-3">Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry.</p>
+                        <div class="card-actions flex justify-between items-center">
+                            <p class="text-gold-color font-roboto font-black text-4xl">$234</p>
+                            <button class="btn bg-gradient-to-b from-[#A4BC46] to-[#85A019] text-white font-medium text-base w-40 h-14"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100 shadow-xl p-5">
+                    <figure class="bg-[#F1F1F1] p-3 rounded-2xl">
+                        <img src="assets/jacket-3.png" alt="Jacket" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body -ml-6">
+                        <h2 class="card-title text-section-title text-2xl font-roboto mb-2">Woman Leather Jacket </h2>
+                        <p class="text-common-p-color text-base font-roboto font-normal mb-3">Lorem Ipsum is simply dummy text of the
+                            printing and typesetting industry.</p>
+                        <div class="card-actions flex justify-between items-center">
+                            <p class="text-gold-color font-roboto font-black text-4xl">$234</p>
+                            <button class="btn bg-gradient-to-b from-[#A4BC46] to-[#85A019] text-white font-medium text-base w-40 h-14"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <script src="https://kit.fontawesome.com/9a67b7fa89.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
